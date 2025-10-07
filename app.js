@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     dino.style.botton = position + 'px'
                     }, 20)
             }
-
-
             // move character up 
             position += 29
             count++

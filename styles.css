@@ -39,7 +39,7 @@ body {
 #alert {
   text-align: center;
   font-size: 50px;
-  color: red;
+  font-family: "Bitcount Prop Single Ink", system-ui;
 }
 
 h1 {
