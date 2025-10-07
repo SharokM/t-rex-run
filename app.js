@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // jump()
         }
     }
-    document.addEventListener("keyup", control)
+    document.addEventListener("keydown", control)
 
 
     let position = 0
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     position -=5
                     count--
                     position = position * gravity 
-                    dino.style.botton = position + 'px'
+                    dino.style.bottom = position + 'px'
                     }, 20)
             }
             // move character up 
