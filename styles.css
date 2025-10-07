@@ -1,0 +1,33 @@
+@keyframes sliderright {
+  from {
+    background-position: 7000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+#desert {
+  position: absolute;
+  background-image: url("background.jpeg");
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+  animation: sliderright 600s infinite linear;
+}
+
+.dino {
+  background-image: url("trex.webp");
+  height: 60px;
+  width: 60px;
+  bottom: 0;
+  position: absolute;
+}
+
+.obstacle {
+  background-image: url("cactus.jpg");
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+}
