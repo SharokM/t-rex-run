@@ -45,5 +45,6 @@ body {
 h1 {
   text-align: center;
   font-size: 100px;
-  color: bisque;
+  font-weight: bolder;
+  font-family: "Bitcount Prop Single Ink", system-ui;
 }
