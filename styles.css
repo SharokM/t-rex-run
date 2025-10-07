@@ -31,3 +31,19 @@
   position: absolute;
   bottom: 0;
 }
+
+body {
+  background-color: rgb(44, 101, 44);
+}
+
+#alert {
+  text-align: center;
+  font-size: 50px;
+  color: red;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  color: bisque;
+}
