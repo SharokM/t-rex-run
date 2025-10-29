@@ -7,6 +7,9 @@
   }
 }
 
+.body {
+}
+
 #desert {
   position: absolute;
   background-image: url("background.jpeg");
@@ -63,4 +66,52 @@ header {
 
 .header-title {
   /* code  */
+}
+
+nav {
+  position: static;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-header {
+  padding: 0;
+  background-color: transparent;
+}
+
+.nav-logo img {
+  max-width: 250px;
+}
+
+.nav-logo-dark {
+  display: flex;
+}
+
+.nav-logo-white {
+  display: none;
+}
+
+.nav-menu-btn {
+  display: none;
+}
+
+.nav-links {
+  position: static;
+  padding: 0;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  transform: none;
+  z-index: 1;
+}
+
+.nav-links a {
+  color: var();
+}
+
+.nav-links a:hover {
+  color: var();
 }
