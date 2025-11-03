@@ -7,16 +7,116 @@
   }
 }
 
-.body {
+body {
+  background-color: rgb(44, 18, 22);
+}
+
+header {
+}
+
+.header-h1 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bolder;
+  font-family: "Bitcount Prop Single Ink", system-ui;
+}
+
+nav {
+  position: static;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.nav-header {
+  padding: 0;
+  background-color: transparent;
+}
+
+.nav-logo img {
+  max-width: 250px;
+}
+
+.nav-logo a {
+  /* code  */
+}
+
+.nav-logo img {
+}
+
+.nav-logo-dark {
+  display: flex;
+}
+
+.nav-logo-light {
+  display: none;
+}
+
+.nav-links {
+  position: static;
+  list-style: none;
+  padding: 0;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: transparent;
+  transform: none;
+  z-index: 1;
+  align-items: center;
+  gap: 1em;
+}
+
+#navbar {
+}
+
+.nav-links a {
+  color: var(red);
+  align-items: center;
+  font-weight: 300;
+  text-decoration: wavy;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(pink);
+}
+
+.dropdown {
+}
+
+.dropdown-button {
+}
+
+.dropdown li {
+}
+
+#alert {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Bitcount Prop Single Ink", system-ui;
+}
+
+h2 {
 }
 
 #desert {
   position: absolute;
   background-image: url("background.jpeg");
-  height: 200px;
+  height: 500px;
   width: 100%;
   bottom: 0;
   animation: sliderright 600s infinite linear;
+}
+
+.desert {
+}
+
+.grid {
 }
 
 .dino {
@@ -35,24 +135,20 @@
   bottom: 0;
 }
 
-body {
-  background-color: rgb(44, 101, 44);
-}
-
-#alert {
+.restart-zone {
+  margin-top: 160px;
+  box-sizing: border-box;
   text-align: center;
-  font-size: 50px;
-  font-family: "Bitcount Prop Single Ink", system-ui;
-}
-
-h1 {
-  text-align: center;
-  font-size: 100px;
-  font-weight: bolder;
-  font-family: "Bitcount Prop Single Ink", system-ui;
 }
 
 .restart-button {
+  color: rgb(7, 9, 9);
+  height: 50px;
+  width: 100px;
+}
+
+.main {
+  text-align: center;
 }
 
 .restart {
@@ -61,57 +157,23 @@ h1 {
 .desert {
 }
 
-header {
-}
-
-.header-title {
-  /* code  */
-}
-
-nav {
-  position: static;
-  padding: 2rem 1rem;
+.section {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-flow: row;
+  text-align: center;
+  color: #f0a5f3f2;
+  justify-content: space-evenly;
+  padding-top: 60px;
+  align-items: baseline;
 }
 
-.nav-header {
-  padding: 0;
-  background-color: transparent;
+.section-title {
+  color: wheat;
+  text-align: center;
 }
 
-.nav-logo img {
-  max-width: 250px;
+.dinosaur-fact-list {
 }
 
-.nav-logo-dark {
-  display: flex;
-}
-
-.nav-logo-white {
-  display: none;
-}
-
-.nav-menu-btn {
-  display: none;
-}
-
-.nav-links {
-  position: static;
-  padding: 0;
-  flex-direction: row;
-  justify-content: flex-end;
-  background-color: transparent;
-  transform: none;
-  z-index: 1;
-}
-
-.nav-links a {
-  color: var();
-}
-
-.nav-links a:hover {
-  color: var();
+.dinosaur-image-section {
 }

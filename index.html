@@ -15,19 +15,10 @@
 
   <body>
     <!-- HEADER TITLE/ HERO  -->
-    <h1 class="header-title">DINOSAUR RUN</h1>
-    <header class="header-wrapper">
-      <div id="desert" class="desert">
-        <h2 id="alert">Alert!</h2>
 
-        <div class="grid">
-          <div class="dino"></div>
-        </div>
+    <header class="header">
+      <h1 class="header-h1">🦖DINOSAUR RUN🦖</h1>
 
-        <div class="restart-zone">
-          <button class="restart-button">Restart?</button>
-        </div>
-      </div>
       <!-- NAV AREA  -->
       <nav>
         <div class="nav-header">
@@ -39,24 +30,54 @@
             </a>
           </div>
         </div>
+
         <!-- NAV BAR  -->
-        <ul class="nav-links" id="navbar">
+       <ul class="nav-links" id="navbar">
+        <li class="dropdown">
+          <button class="dropdown-button">MENU</button>
           <li><a href="#">HOME</a></li>
           <li><a href="#special">SPECIAL</a></li>
           <li><a href="#menu">MENU</a></li>
           <li><a href="#event">EVENT</a></li>
           <li><a href="#contact">CONTACT</a></li>
-        </ul>
+        </li>
+       </ul>
       </nav>
+
+      <!-- ALERT/ GAME STATUS  -->
+      <h2 id="alert">Alert!</h2>
     </header>
 
+      <!-- GRID  -->
+    <div id="desert" class="desert">
+      <div class="grid">
+        <div class="dino"></div>
+      </div>
+    </div>
+
     <!-- MAIN SECTION -->
-    <main>
-      <h2>MAIN SECTION</h2>
-      <p>this is the main section</p>
-    </main>
+    <h2 class="section-title">SECTION</h2>
+    <section class="section">
+      <div class="dinosaur-fact-list">
+
+        <h4>🦖DINOSAUR FACTS!</h4>
+        <p>Fact 1: Dinosaurs are extinct</p>
+        <p>Fact 2: Dinosaurs are extinct</p>
+        <p>Fact 3: Dinosaurs are extinct</p>
+        <p>Fact 4: Dinosaurs are extinct</p>
+        <p>Fact 5: Dinosaurs are extinct</p>
+      </div>
+
+      <div class="dinosaur-image-section">
+        <img src="img/dino-img-sec.jpeg" alt="dinosaur with feathers">
+        <p>200,million year old somethingasaurus</p>
+      </div>
+    </section>
+
+    <!-- RESTART GAME BUTTON  -->
+    <div class="restart-zone">
+      <button class="restart-button">Restart Mini Game?</button>
+    </div>
+
   </body>
 </html>
-
-<!-- to do: make responsive, add restart button, change characters & improve
-background -->
