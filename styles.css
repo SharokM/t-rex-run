@@ -142,8 +142,9 @@ h2 {
 }
 
 .restart-button {
-  color: rgb(7, 9, 9);
+  color: rgb(45 173 173);
   height: 50px;
+  background-color: bisque;
   width: 100px;
 }
 
