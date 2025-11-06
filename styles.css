@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(44, 18, 22);
+  background-color: rgb(242, 187, 195);
 }
 
 header {
@@ -142,7 +142,7 @@ h2 {
 }
 
 .restart-button {
-  color: rgb(45 173 173);
+  color: rgb(193, 219, 26);
   height: 50px;
   background-color: bisque;
   width: 100px;
@@ -186,4 +186,24 @@ h2 {
 }
 
 .dinosaur-image-section {
+}
+
+/* ******* THANK YOU PAGE ******* */
+
+/* ******* THANK YOU PAGE ******* */
+
+/* ******* THANK YOU PAGE ******* */
+
+/* ******* THANK YOU PAGE ******* */
+
+footer {
+}
+
+.contact-wrapper {
+}
+
+.contact-wrapper h4 {
+}
+
+.contact-wrapper p {
 }
