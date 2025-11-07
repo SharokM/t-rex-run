@@ -200,10 +200,42 @@ footer {
 }
 
 .contact-wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1em;
+  align-items: baseline;
+  color: black;
 }
 
 .contact-wrapper h4 {
 }
 
 .contact-wrapper p {
+  text-align: center;
+  font-size: ;
+  font-family: ;
+  font-weight: ;
+}
+
+.xcontact-page-main {
+}
+
+.contact-page-main p {
+}
+
+.contact-page-main-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: math;
+  padding: 200px 0 260px 0;
+}
+
+.social-article-section {
+}
+
+.fontawesome-icon {
+}
+
+.features-item-descr {
 }
