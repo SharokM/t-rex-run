@@ -90,9 +90,12 @@ nav {
 }
 
 .dropdown-button {
+  border: 2px solid rgb(3, 8, 12);
+  background-color: rgb(232, 228, 222);
 }
 
 .dropdown li {
+  visibility: hidden;
 }
 
 #alert {
@@ -218,7 +221,15 @@ footer {
   font-weight: ;
 }
 
-.xcontact-page-main {
+.contact-page-main {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  gap: 20px;
+  padding: 0 10px 0 10px;
+  text-align: center;
+  justify-content: center;
+  width: 173px;
 }
 
 .contact-page-main p {
@@ -232,6 +243,12 @@ footer {
 }
 
 .social-article-section {
+  box-sizing: border-box;
+  object-fit: contain;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  font-size: 1.2rem;
+  font-family: math;
 }
 
 .fontawesome-icon {
