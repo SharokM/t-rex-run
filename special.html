@@ -1,10 +1,9 @@
 
-<!-- GLOBAL STYLES    -->
 <!DOCTYPE html>
 <html lang="">
   <head>
     <meta charset="utf-8" />
-    <title>T Rex Run</title>
+    <title>T Rex Run: Special</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,31 +35,36 @@
        <ul class="nav-links" id="navbar">
         <li class="dropdown">
           <button class="dropdown-button">MENU</button>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#special">SPECIAL</a></li>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#">SPECIAL</a></li>
           <li><a href="#menu">MENU</a></li>
           <li><a href="#event">EVENT</a></li>
           <li><a href="contact.html">CONTACT</a></li>
         </li>
        </ul>
       </nav>
+      
+      
+      <!--SPECIAL PAGE IMAGE API SECTION -->
+        <section class="special-facts" id="special">
+            <h2 class="special-section-title">CLICK HERE FOR A RANDOM DINOSAUR FACT!</h2>
 
-      <!-- ALERT/ GAME STATUS  -->
-      <h2 id="alert">Alert!</h2>
-    </header>
-
-    
-        <!-- RESTART GAME BUTTON  -->
-        <div class="restart-zone">
-          <button class="restart-button">Restart Mini Game?</button>
+          <!-- BUTTON REPLACE WITH DINOSAUR FACT FROM API -->
+          <div class="dinosaur-fact-list">
+            <h3 class="fact-header">🦕 DINOSAUR FACT! 🦕: <span class="author"></span></h3>
+            <figure>
+              <img class="api-img" />
+            </figure>
+          </div>
+          <button class="fact-button">Show me an image!</button>
         </div>
+    
+          <!-- DINOSAUR IMAGE  -->
+          <div class="dinosaur-image-section">
+            <img src="img/dino-img-sec.jpeg" alt="dinosaur with feathers">
+          </div>
+        </section>
 
-      <!-- GRID  -->
-    <div id="desert" class="desert">
-      <div class="grid">
-        <div class="dino"></div>
-      </div>
-    </div>
-
-  </body>
-</html>
+    </body>
+    </html>
+    

@@ -11,6 +11,14 @@ body {
   background-color: rgb(242, 187, 195);
 }
 
+/* ***** HEADER SECTION **** */
+
+/* ***** HEADER SECTION **** */
+
+/* ***** HEADER SECTION **** */
+
+/* ***** HEADER SECTION **** */
+
 header {
 }
 
@@ -30,6 +38,14 @@ nav {
   gap: 1rem;
   flex-direction: row;
 }
+
+/* ***** NAV SECTION **** */
+
+/* ***** NAV SECTION **** */
+
+/* ***** NAV SECTION **** */
+
+/* ***** NAV SECTION **** */
 
 .nav-header {
   padding: 0;
@@ -98,14 +114,27 @@ nav {
   visibility: hidden;
 }
 
+/* **** RESULTS ***  */
+
+/* **** RESULTS ***  */
+
+/* **** RESULTS ***  */
+
+/* **** RESULTS ***  */
+
 #alert {
   text-align: center;
   font-size: 3em;
   font-family: "Bitcount Prop Single Ink", system-ui;
 }
 
-h2 {
-}
+/* **** GAME SECTION ***  */
+
+/* **** GAME SECTION ***  */
+
+/* **** GAME SECTION ***  */
+
+/* **** GAME SECTION ***  */
 
 #desert {
   position: absolute;
@@ -176,31 +205,16 @@ h2 {
   text-align: center;
 }
 
-.dinosaur-fact-list {
-}
-
-#dino-fact {
-}
-
-.fact-button {
-}
-
-#dino-fact-button {
-}
-
-.dinosaur-image-section {
-}
-
-/* ******* THANK YOU PAGE ******* */
-
-/* ******* THANK YOU PAGE ******* */
-
-/* ******* THANK YOU PAGE ******* */
-
-/* ******* THANK YOU PAGE ******* */
-
 footer {
 }
+
+/* ******* CONTACT PAGE ******* */
+
+/* ******* CONTACT PAGE ******* */
+
+/* ******* CONTACT PAGE ******* */
+
+/* ******* CONTACT PAGE ******* */
 
 .contact-wrapper {
   text-align: center;
@@ -255,4 +269,76 @@ footer {
 }
 
 .features-item-descr {
+}
+
+/****** FACT PAGE ******/
+
+/****** FACT PAGE ******/
+
+/****** FACT PAGE ******/
+
+/****** FACT PAGE ******/
+
+.special-section-title {
+}
+
+.special-facts {
+  text-align: center;
+}
+
+#special {
+  text-align: center;
+}
+
+.dinosaur-fact-list {
+}
+
+figure {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.fact-header {
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat";
+}
+
+.author {
+}
+
+#dino-fact {
+}
+
+.fact-button {
+  margin: 1.5em auto;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: royalblue;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.fact-button:hover {
+  margin: 1.5em auto;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: rgb(44, 77, 179);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dinosaur-image-section {
+}
+
+.api-img {
+  max-width: 100%;
+  height: auto;
 }
