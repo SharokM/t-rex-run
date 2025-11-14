@@ -81,13 +81,22 @@ document.addEventListener("DOMContentLoaded", function () {
     generateObstacles()
 })
 
-// DINO FACT API 
+// DINO FACT/ IMG API 
 const getFact = async function () {
     const res = await fetch("https://picsum.photos/v2/list?limit=100");
     const facts = await res.json();
     console.log(facts);
+    selectRandomFact(facts);
   };
   
   getFact();
 
 //   add click event listener for button *** 
+
+const selectRandomFact = function (facts) {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    // console.log(randomIndex);
+    const randomFact = facts[randomIndex];
+    console.log(randomFact);
+    return facts[randomIndex];
+}
