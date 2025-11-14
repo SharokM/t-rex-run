@@ -75,3 +75,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     generateObstacles()
 })
+
+// DINO FACT API 
+
+const getData = async function () {
+    try {
+        const response = await fetch('https://dino-facts-api.shultzlab.com/dinosaurs/random')
+        const data = await response.json()
+        // console.log(data)
+        displayData(data)
+    } catch (error) {
+        console.error('Error fetching data:', error)
+    }
+    getData();
+}
