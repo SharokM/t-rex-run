@@ -1,3 +1,8 @@
+const factButton = document.querySelector(".fact-button");
+const authorSpan = document.querySelector(".author");
+const imgDiv = document.querySelector(".dinosaur-fact-list");
+const img = document.querySelector(".api-img");
+
 document.addEventListener("DOMContentLoaded", function () {
     const dino = document.querySelector(".dino")
     const grid = document.querySelector(".grid")
@@ -77,15 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 // DINO FACT API 
+const getFact = async function () {
+    const res = await fetch("https://picsum.photos/v2/list?limit=100");
+    const facts = await res.json();
+    console.log(facts);
+  };
+  
+  getFact();
 
-const getData = async function () {
-    try {
-        const response = await fetch('https://dino-facts-api.shultzlab.com/dinosaurs/random')
-        const data = await response.json()
-        // console.log(data)
-        displayData(data)
-    } catch (error) {
-        console.error('Error fetching data:', error)
-    }
-    getData();
-}
+//   add click event listener for button *** 
