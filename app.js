@@ -3,11 +3,45 @@ document.addEventListener("DOMContentLoaded", function () {
     const dino = document.querySelector(".dino")
     const grid = document.querySelector(".grid")
     const alert = document.getElementById("alert")
+    const restartButton = document.querySelector(".restart-button")
     // console.log(dino)
     let gravity = 0.9
     let isJumping = false
     let isGameOver = false
     let position = 0
+
+
+    function jump () {
+        isJumping = true
+        let count = 0 
+
+        let timerId = setInterval(function () {
+            // move character down 
+            if (count === 15) {
+                clearInterval(timerId)
+
+
+                let downTimerId = setInterval(() {
+                    if (count === 0) {
+                        clearInterval(downTimerId)
+                        isJumping = false
+                    }
+                // console.log("down triggered")
+                    position -= 5
+                    count--
+                    // position = position * gravity 
+                    dino.style.bottom = position + 'px'
+                    }, 20)
+
+                    return
+            }
+            // move character up 
+            position += 20
+            count++
+            // position = position * gravity
+            dino.style.bottom = position + 'px'
+        }, 20)
+    }
 
     function control (e) {
         if (e.code === "Space") {
@@ -19,39 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     document.addEventListener("keydown", control)
 
-
-
-    function jump () {
-        if (isJumping) return
-        isJumping = true
-        let count = 0 
-        let timerId = setInterval(function () {
-
-            // move character down 
-            if (count === 15) {
-                clearInterval(timerId)
-                let downTimerId = setInterval(function () {
-                    if (count === 0) {
-                        clearInterval(downTimerId)
-                        isJumping = false
-                    }
-                // console.log("down triggered")
-                    position -= 5
-                    count--
-                    // position = position * gravity 
-                    dino.style.bottom = position + 'px'
-                    }, 20)
-            }
-            // move character up 
-            position += 29
-            count++
-            // position = position * gravity
-            dino.style.bottom = position + 'px'
-        }, 20)
-    }
-
     function generateObstacles() {
-        if (!isGameOver) return
+        if (isGameOver) return
             let obstaclePosition = 1000
             const obstacle = document.createElement('div')
             obstacle.classList.add('obstacle')
@@ -83,17 +86,19 @@ const authorSpan = document.querySelector(".author");
 const factDiv = document.querySelector(".dinosaur-fact-list"); 
 const fact = document.querySelector(".api-img");
 
+
+
+// array to hold dinosaur facts
 let dinosaurFacts = [];
 
 // DINO FACT/ IMG API 
 const getFact = async function () {
 
-  if (dinosaurFacts.length > 0) {
+  if (dinosaurFacts.length === 0) {
     const res = await fetch("https://picsum.photos/v2/list?limit=100");
     const facts = await res.json();
     // console.log(facts);
     selectRandomFact(facts);
-    displayFact(randomFact);
   } else { 
     return;
   }
