@@ -7,8 +7,14 @@
   }
 }
 
+.hide {
+  display: none;
+}
+
 body {
   background-color: rgb(242, 187, 195);
+  margin: 0;
+  font-family: ;
 }
 
 /* ***** HEADER SECTION **** */
@@ -126,6 +132,7 @@ nav {
   text-align: center;
   font-size: 3em;
   font-family: "Bitcount Prop Single Ink", system-ui;
+  margin-top: 90%;
 }
 
 /* **** GAME SECTION ***  */
@@ -287,7 +294,6 @@ footer {
 }
 
 #special {
-  text-align: center;
 }
 
 .dinosaur-fact-list {

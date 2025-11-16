@@ -1,12 +1,10 @@
-
 <!-- GLOBAL STYLES    -->
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>T Rex Run</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +18,7 @@
     <header class="header">
       <h1 class="header-h1">🦖DINOSAUR RUN🦖</h1>
 
-      <!-- NAV AREA  -->  
+      <!-- NAV AREA  -->
       <nav>
         <div class="nav-header">
           <!-- LOGO IN LIGHT & DARK VERSIONS TO ADD -->
@@ -33,34 +31,35 @@
         </div>
 
         <!-- NAV BAR  -->
-       <ul class="nav-links" id="navbar">
-        <li class="dropdown">
-          <button class="dropdown-button">MENU</button>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#special">SPECIAL</a></li>
-          <li><a href="#menu">MENU</a></li>
-          <li><a href="#event">EVENT</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </li>
-       </ul>
+        <ul class="nav-links" id="navbar">
+          <li class="dropdown">
+            <button class="dropdown-button">MENU</button>
+            <ul class="dropdown-content">
+              <li><a href="#">HOME</a></li>
+              <li><a href="#special">SPECIAL</a></li>
+              <li><a href="#menu">MENU</a></li>
+              <li><a href="#event">EVENT</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </li>
+        </ul>
       </nav>
-
-      <!-- ALERT/ GAME STATUS  -->
-      <h2 id="alert">Alert!</h2>
     </header>
 
-    
-        <!-- RESTART GAME BUTTON  -->
-        <div class="restart-zone">
-          <button class="restart-button">Restart Mini Game?</button>
-        </div>
+    <!-- ALERT/ GAME STATUS  -->
+    <h2 id="alert">Alert!</h2>
 
-      <!-- GRID  -->
+    <!-- RESTART GAME BUTTON  -->
+    <div class="restart-zone">
+      <button class="restart-button">Restart Mini Game?</button>
+    </div>
+
+    <!-- GRID  -->
     <div id="desert" class="desert">
       <div class="grid">
         <div class="dino"></div>
       </div>
     </div>
-
+    <script src="app.js"></script>
   </body>
 </html>

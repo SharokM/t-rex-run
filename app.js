@@ -1,7 +1,3 @@
-const factButton = document.querySelector(".fact-button");
-const authorSpan = document.querySelector(".author");
-const imgDiv = document.querySelector(".dinosaur-fact-list");
-const img = document.querySelector(".api-img");
 
 document.addEventListener("DOMContentLoaded", function () {
     const dino = document.querySelector(".dino")
@@ -11,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let gravity = 0.9
     let isJumping = false
     let isGameOver = false
+    let position = 0
 
     function control (e) {
         if (e.code === "Space") {
@@ -18,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!isJumping) {
                 jump()
             }
-            // jump()
         }
     }
     document.addEventListener("keydown", control)
 
 
-    let position = 0
+
     function jump () {
+        if (isJumping) return
         isJumping = true
         let count = 0 
         let timerId = setInterval(function () {
@@ -39,64 +36,98 @@ document.addEventListener("DOMContentLoaded", function () {
                         isJumping = false
                     }
                 // console.log("down triggered")
-                    position -=5
+                    position -= 5
                     count--
-                    position = position * gravity 
+                    // position = position * gravity 
                     dino.style.bottom = position + 'px'
                     }, 20)
             }
             // move character up 
             position += 29
             count++
-            position = position * gravity
+            // position = position * gravity
             dino.style.bottom = position + 'px'
         }, 20)
     }
 
     function generateObstacles() {
-        if (!isGameOver) {
-            let randomTime = Math.random() * 4000
+        if (!isGameOver) return
             let obstaclePosition = 1000
             const obstacle = document.createElement('div')
             obstacle.classList.add('obstacle')
             grid.appendChild(obstacle)
             obstacle.style.left = obstaclePosition + 'px'
      
-            let timerId = setInterval(function () {
+            const timerId = setInterval(function () {
              if (obstaclePosition > 0 && obstaclePosition < 60 && position < 60) {
                  clearInterval(timerId)
                  alert.innerHTML = "GAME OVER, YOU LOSE!"
                  isGameOver = true
                  // remove child elements from grid 
                  while(grid.firstChild) {
-                     grid.removeChild(grid.lastChild)
+                     grid.removeChild(grid.firstChild)
                  }
              }
                  obstaclePosition -=10
                  obstacle.style.left = obstaclePosition + 'px'
             }, 20)
+
+            const randomTime = Math.random() * 4000
             setTimeout(generateObstacles, randomTime)
         } 
-    }
     generateObstacles()
-})
+
+
+const factButton = document.querySelector(".fact-button");
+const authorSpan = document.querySelector(".author");
+const factDiv = document.querySelector(".dinosaur-fact-list"); 
+const fact = document.querySelector(".api-img");
+
+let dinosaurFacts = [];
 
 // DINO FACT/ IMG API 
 const getFact = async function () {
+
+  if (dinosaurFacts.length > 0) {
     const res = await fetch("https://picsum.photos/v2/list?limit=100");
     const facts = await res.json();
-    console.log(facts);
+    // console.log(facts);
     selectRandomFact(facts);
-  };
-  
-  getFact();
+    displayFact(randomFact);
+  } else { 
+    return;
+  }
+}
+//   getFact();
 
-//   add click event listener for button *** 
+//   display fact  
 
 const selectRandomFact = function (facts) {
     const randomIndex = Math.floor(Math.random() * facts.length);
     // console.log(randomIndex);
     const randomFact = facts[randomIndex];
     console.log(randomFact);
-    return facts[randomIndex];
+    // return facts[randomIndex];
+    displayFact(randomFact);
 }
+
+displayFact = function (randomFact) {
+    const author = randomFact.author
+    const factAddress = randomFact.download_url
+    const factUrl = randomFact.url
+
+    authorSpan.innerText = `Fact by: ${author}`
+    fact.src = factAddress;
+    fact.alt = `Fact by: ${factUrl}`
+    factDiv.classList.remove("hide")
+
+    // fact.src = randomFact.download_url;
+    // authorSpan.textContent = `Photo by: ${randomFact.author}`;
+}
+
+factButton.addEventListener("click", function () {
+    getFact();
+    
+    // const randomFact = selectRandomFact();
+    // displayFact(randomFact);
+})});
