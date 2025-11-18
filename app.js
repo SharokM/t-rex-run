@@ -1,10 +1,11 @@
 
 const grid = document.querySelector(".grid");
+const restartButton = document.querySelector(".restart-button")
 
 document.addEventListener("DOMContentLoaded", function () {
     const dino = document.querySelector(".dino")
     const alertMessage = document.querySelector("#special-alert")
-    const restartButton = document.querySelector(".restart-button")
+    
     // console.log(dino)
     let gravity = 0.9
     let isJumping = false
@@ -108,9 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     generateObstacles()
 
-    restartButton.addEventListener("click", function() {
-        location.reload();
-    })
 
 
 const factButton = document.querySelector(".fact-button");
@@ -203,3 +201,9 @@ factButton.addEventListener("click", function () {
 //         scoreDisplay.textContent = `Your score: ${score}`;
 //     }
 // }, 400);
+
+restartButton.addEventListener("click", function() {
+    location.reload()
+    isGameOver = false
+    // console.log("Game restarted")
+})
