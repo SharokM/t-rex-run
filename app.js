@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // document.body.style.backgroundColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`
                 alertMessage.innerHTML = "💥GAME OVER, YOU LOSE!💥"
                 isGameOver = true
+                restartButton.classList.remove("hide");
     
                 while(grid.firstChild) {
                     grid.removeChild(grid.firstChild)
