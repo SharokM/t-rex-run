@@ -14,7 +14,7 @@
 body {
   background-color: rgb(242, 187, 195);
   margin: 0;
-  font-family: ;
+  font-family: Arial, sans-serif;
 }
 
 /* ***** HEADER SECTION **** */
@@ -243,7 +243,7 @@ footer {
 
 .contact-wrapper p {
   text-align: center;
-  font-size: ;
+  font-size: 1rem;
   font-family: ;
   font-weight: ;
 }
